@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js advanced practice</title>
+</head>
+
+<body>
+    <h1>1. Show your name and group using JS:</h1>
+    <script type="text/javascript">
+        document.write("Name: Sapargali <br> Group: cs-2123");
+    </script>
+
+    <h1>2. Display the current day and time in the following format:</h1>
+    <h2 id="displayDateTime"></h2>
+
+    <h1>4. Calculate multiplication and division of two numbers (input from user):</h1>
+
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br> 2nd Number: <input type="text" id="secondNumber" /><br>
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+    </form>
+
+    <p>The Result is : <br>
+        <span id="result"></span>
+    </p>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

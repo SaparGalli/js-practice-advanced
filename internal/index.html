@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>js advanced practice</title>
+</head>
+<body>
+
+  <h1>1.Show your name and group using JS:</h1>
+  <script type="text/javascript">
+    document.write("Name: Sapargali <br> Group: cs-2123");
+  </script>
+
+  <h1>2. Display the current day and time in the following format:</h1>
+  <h2 id="displayDateTime"></h2>
+  <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var year = today.getFullYear();
+  var date = today.getDate();
+  var month = today.getMonth()+1;
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+  document.getElementById("displayDateTime").innerHTML = 'Year: ' + year + ' <br> Today is: ' + daylist[day] + ' <br> Date: ' + date + ' <br> Month: ' + month + ' <br> Current time is: ' + time;
+  </script>
+
+  <h1>3.Calculate days left until your university graduation:</h1>
+  <script type="text/javascript">
+  var date1 = new Date("02/03/2022");
+  var date2 = new Date("08/06/2024");
+  var Difference_In_Time = date2.getTime() - date1.getTime();
+  var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+  document.write(Difference_In_Days + " days left until the freedom!");
+  </script>
+
+  <h1>4.Calculate multiplication and division of two numbers (input from user):</h1>
+
+  <form>
+   1st Number : <input type="text"
+   id="firstNumber" /><br>
+   2nd Number: <input type="text"
+   id="secondNumber" /><br>
+   <input type="button" onClick="multiplyBy()"
+   Value="Multiply" />
+   <input type="button" onClick="divideBy()"
+     Value="Divide" />
+ </form>
+
+ <p>The Result is : <br>
+  <span id = "result"></span>
+ </p>
+
+ <script>
+   function multiplyBy()
+   {
+     num1 = document.getElementById(
+       "firstNumber").value;
+     num2 = document.getElementById(
+       "secondNumber").value;
+     document.getElementById(
+       "result").innerHTML = num1 * num2;
+   }
+   function divideBy()
+    {
+      num1 = document.getElementById(
+        "firstNumber").value;
+      num2 = document.getElementById(
+        "secondNumber").value;
+      document.getElementById(
+        "result").innerHTML = num1 / num2;
+    }
+ </script>
+
+  </body>
+</html>
